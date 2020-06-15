@@ -1,4 +1,4 @@
-module registry
+module github.com/qiujiafei123/registry
 
 go 1.14
 
@@ -10,6 +10,7 @@ require (
 	github.com/gogo/protobuf v1.3.1 // indirect
 	github.com/golang/protobuf v1.4.2 // indirect
 	github.com/google/uuid v1.1.1 // indirect
+	github.com/satori/go.uuid v1.2.0
 	go.uber.org/zap v1.15.0 // indirect
 	golang.org/x/net v0.0.0-20200602114024-627f9648deb9 // indirect
 	golang.org/x/sync v0.0.0-20200317015054-43a5402ce75a

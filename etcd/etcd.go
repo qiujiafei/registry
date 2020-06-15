@@ -5,10 +5,11 @@ import (
 	"encoding/json"
 	"github.com/coreos/etcd/clientv3"
 	"errors"
+	"github.com/satori/go.uuid"
 	"net"
 	"path"
 	"reflect"
-	"registry"
+	"github.com/qiujiafei123/registry"
 	"sort"
 	"strings"
 	"sync"
@@ -130,6 +131,10 @@ func (e *etcdRegistry) Register(s *registry.Service, opts ...registry.RegisterOp
 	// 外层定义一个包含所有的 global error
 	var gerr error
 	for _, node := range s.Nodes {
+		// 默认发 uid
+		if node.Id == "" {
+			node.Id = uuid.Must(uuid.NewV4(), nil).String()
+		}
 		err := e.registerNode(s, node, opts ...)
 		if err != nil {
 			gerr = err

@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"github.com/coreos/etcd/clientv3"
-	"registry"
+	"github.com/qiujiafei123/registry"
 	"time"
 )
 

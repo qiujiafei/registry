@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 	"log"
-	"registry"
-	"registry/etcd"
+	"github.com/qiujiafei123/registry"
+	"github.com/qiujiafei123/registry/etcd"
 	"time"
 )
 
