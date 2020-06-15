@@ -4,14 +4,14 @@ import (
 	"log"
 	"os"
 	"os/signal"
-	"registry"
-	"registry/service"
+	"github.com/qiujiafei123/registry"
+	"github.com/qiujiafei123/registry/service"
 	"syscall"
 )
 
 func main() {
 	node := &registry.Node{
-		Id: "node2",
+		//Id: "node2",
 		Address: "node2.com",
 	}
 	srv := &registry.Service{
